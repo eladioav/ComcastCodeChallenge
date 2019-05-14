@@ -46,9 +46,9 @@ class MasterViewController: UITableViewController, ModelToView {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                //let object = objects[indexPath.row] as! NSDate
+                let object = model.getCharacter(index: indexPath.row)
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                //controller.detailItem = object
+                controller.object = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -68,12 +68,8 @@ class MasterViewController: UITableViewController, ModelToView {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let title = self.model.getTitle(index: indexPath.row)
-        let description = self.model.getDescription(index: indexPath.row)
-        
-        cell.textLabel!.text = title
-        cell.detailTextLabel?.text = description
-//        cell.backgroundColor = indexPath.row % 2 == 0 ? UIColor.white : UIColor.lightGray
+        let object = self.model.getCharacter(index: indexPath.row)
+        cell.textLabel!.text = object.title
         return cell
     }
     

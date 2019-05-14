@@ -42,3 +42,10 @@ struct Icon : Codable {
     var Width : String
     var URL : String
 }
+
+struct CharacterModel {
+    
+    var urlImage : String?
+    var title : String
+    var description : String
+}

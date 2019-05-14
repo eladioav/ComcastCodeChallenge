@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    var object : CharacterModel?
 
     func configureView() {
         // Update the user interface for the detail item.

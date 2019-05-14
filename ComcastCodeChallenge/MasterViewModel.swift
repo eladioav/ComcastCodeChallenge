@@ -46,9 +46,17 @@ class MasterViewModel {
     /// - Parameters:
     ///     - index : Element number
     /// - Returns: Character
-    func getCharacter(index : Int) -> RelatedTopic {
+    func getCharacter(index : Int) -> CharacterModel {
         
-        return self.filteredData[index]
+        let character_ = self.filteredData[index]
+        var info = self.filteredData[index].Text.components(separatedBy: "-")
+        let title = info.first ?? "No name"
+        info.removeFirst()
+        let description = info.compactMap({ $0 }).description
+        
+        let characterModel = CharacterModel(urlImage: character_.Icon.URL, title: title, description: description)
+        
+        return characterModel
     }
     
     /// Get character title
@@ -68,6 +76,7 @@ class MasterViewModel {
         
         return self.filteredData[index].Text.components(separatedBy: "-").last ?? "No description"
     }
+    
     
     /// Get city from filtered data
     /// - Returns: Number of elements
