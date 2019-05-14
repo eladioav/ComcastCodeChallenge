@@ -23,6 +23,26 @@ class DetailViewController: UIViewController {
         
             self.titleLabelOutlet.text = object_.title
             self.detailLabelOutlet.text = object_.description
+            
+            if let url = object_.urlImage, url != "" {
+                
+                let apicaller = API_Caller(URL: url, httpMethodType: .GET, authenticationType: .None)
+                apicaller.callAPI(dataParameter: nil, customHeaders: nil) {
+                    
+                    [weak self] (status,data,response) in
+                    
+                        if let data_ = data as? Data {
+                        
+                            let image = UIImage(data: data_)
+                        
+                            DispatchQueue.main.async {
+                            
+                                self?.imageViewOutlet.image = image
+                            }
+                        
+                        }
+                }
+            }
         }
     }
 
@@ -31,6 +51,8 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         configureView()
     }
+    
+    
 
 }
 
