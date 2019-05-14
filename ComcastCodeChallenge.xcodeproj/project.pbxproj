@@ -16,6 +16,10 @@
 		7921A691228B0ADF005D84D6 /* ComcastCodeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921A690228B0ADF005D84D6 /* ComcastCodeChallengeTests.swift */; };
 		7921A69C228B0ADF005D84D6 /* ComcastCodeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921A69B228B0ADF005D84D6 /* ComcastCodeChallengeUITests.swift */; };
 		79B6384A228B0CF9001016AE /* API_Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B63849228B0CF9001016AE /* API_Caller.swift */; };
+		79B6384C228B0E49001016AE /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6384B228B0E49001016AE /* MasterViewModel.swift */; };
+		79B6384E228B0FBA001016AE /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6384D228B0FBA001016AE /* Protocols.swift */; };
+		79B63850228B0FC9001016AE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6384F228B0FC9001016AE /* Models.swift */; };
+		79B63852228B10E3001016AE /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B63851228B10E3001016AE /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		7921A69B228B0ADF005D84D6 /* ComcastCodeChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComcastCodeChallengeUITests.swift; sourceTree = "<group>"; };
 		7921A69D228B0ADF005D84D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79B63849228B0CF9001016AE /* API_Caller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Caller.swift; sourceTree = "<group>"; };
+		79B6384B228B0E49001016AE /* MasterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewModel.swift; sourceTree = "<group>"; };
+		79B6384D228B0FBA001016AE /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		79B6384F228B0FC9001016AE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		79B63851228B10E3001016AE /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 				79B63848228B0CBC001016AE /* Common */,
 				7921A679228B0ADA005D84D6 /* AppDelegate.swift */,
 				7921A67B228B0ADA005D84D6 /* MasterViewController.swift */,
+				79B6384B228B0E49001016AE /* MasterViewModel.swift */,
 				7921A67D228B0ADA005D84D6 /* DetailViewController.swift */,
 				7921A67F228B0ADA005D84D6 /* Main.storyboard */,
 				7921A682228B0ADE005D84D6 /* Assets.xcassets */,
@@ -135,6 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				79B63849228B0CF9001016AE /* API_Caller.swift */,
+				79B6384D228B0FBA001016AE /* Protocols.swift */,
+				79B6384F228B0FC9001016AE /* Models.swift */,
+				79B63851228B10E3001016AE /* Global.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -270,10 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B63852228B10E3001016AE /* Global.swift in Sources */,
+				79B6384C228B0E49001016AE /* MasterViewModel.swift in Sources */,
 				7921A67E228B0ADA005D84D6 /* DetailViewController.swift in Sources */,
 				7921A67C228B0ADA005D84D6 /* MasterViewController.swift in Sources */,
+				79B6384E228B0FBA001016AE /* Protocols.swift in Sources */,
 				7921A67A228B0ADA005D84D6 /* AppDelegate.swift in Sources */,
 				79B6384A228B0CF9001016AE /* API_Caller.swift in Sources */,
+				79B63850228B0FC9001016AE /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +471,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eav.backbase.ComcastCodeChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.simpsonsviewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -473,7 +489,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eav.backbase.ComcastCodeChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.simpsonsviewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
