@@ -37,7 +37,7 @@ class MasterViewModel {
             self.filteredData = self.data
             return
         }
-        
+        print(keyword)
         //Filter data by keyword and sort it
         self.filteredData = self.data.filter({ $0.Text.lowercased().contains(keyword.lowercased()) })
     }
@@ -51,6 +51,23 @@ class MasterViewModel {
         return self.filteredData[index]
     }
     
+    /// Get character title
+    /// - Parameters:
+    ///     - index : Element number
+    /// - Returns: Character name
+    func getTitle(index : Int) -> String {
+        
+        return self.filteredData[index].Text.components(separatedBy: "-").first ?? "No name"
+    }
+    
+    /// Get character description
+    /// - Parameters:
+    ///     - index : Element number
+    /// - Returns: Character description
+    func getDescription(index : Int) -> String {
+        
+        return self.filteredData[index].Text.components(separatedBy: "-").last ?? "No description"
+    }
     
     /// Get city from filtered data
     /// - Returns: Number of elements

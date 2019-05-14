@@ -68,9 +68,11 @@ class MasterViewController: UITableViewController, ModelToView {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let object = self.model.getCharacter(index: indexPath.row)
-        cell.textLabel!.text = object.Text
-//        cell.detailTextLabel?.text = object.location.address1 ?? "Not defined location"
+        let title = self.model.getTitle(index: indexPath.row)
+        let description = self.model.getDescription(index: indexPath.row)
+        
+        cell.textLabel!.text = title
+        cell.detailTextLabel?.text = description
 //        cell.backgroundColor = indexPath.row % 2 == 0 ? UIColor.white : UIColor.lightGray
         return cell
     }
@@ -98,7 +100,7 @@ extension MasterViewController: UISearchResultsUpdating {
         
         if let keyword = searchController.searchBar.text {
             
-            //self.model.filterData(keyword: keyword)
+            self.model.filterData(keyword: keyword)
             
         }
         
