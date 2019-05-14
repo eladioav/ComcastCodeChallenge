@@ -37,11 +37,18 @@ class DetailViewController: UIViewController {
                         
                             DispatchQueue.main.async {
                             
+                                self?.imageViewOutlet.backgroundColor = .white
                                 self?.imageViewOutlet.image = image
                             }
                         
-                        }
+                        } else { //Not Data
+                        
+                            self?.imageViewOutlet.backgroundColor = .clear
+                    }
                 }
+            } else { //Not URL
+                
+                self.imageViewOutlet.backgroundColor = .clear
             }
         }
     }
