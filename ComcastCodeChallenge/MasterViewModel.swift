@@ -52,7 +52,7 @@ class MasterViewModel {
         var info = self.filteredData[index].Text.components(separatedBy: "-")
         let title = info.first ?? "No name"
         info.removeFirst()
-        let description = info.compactMap({ $0 }).description
+        let description = info.reduce("", +)
         
         let characterModel = CharacterModel(urlImage: character_.Icon.URL, title: title, description: description)
         
