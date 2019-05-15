@@ -12,8 +12,8 @@ class DetailViewController: UIViewController {
 
     var object : CharacterModel?
 
+    @IBOutlet weak var textViewOutlet: UITextView!
     @IBOutlet weak var imageViewOutlet: UIImageView!
-    @IBOutlet weak var detailLabelOutlet: UILabel!
     @IBOutlet weak var titleLabelOutlet: UILabel!
     
     func configureView() {
@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
         if let object_ = self.object {
         
             self.titleLabelOutlet.text = object_.title
-            self.detailLabelOutlet.text = object_.description
+            self.textViewOutlet.text = object_.description
             
             if let url = object_.urlImage, url != "" {
                 

@@ -56,39 +56,38 @@
                                     <constraint firstAttribute="height" constant="400" id="IaI-Rh-aiB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="No info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wfi-uO-uML">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nU-Fr-SSm">
                                 <rect key="frame" x="20" y="554" width="374" height="323"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HG3-L1-82v" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="190" id="18F-kZ-1aO"/>
                             <constraint firstItem="lQX-uJ-tLx" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="10" id="2NT-s6-08X"/>
-                            <constraint firstItem="Wfi-uO-uML" firstAttribute="top" secondItem="aVx-5X-xuk" secondAttribute="bottom" constant="8" id="3uX-Xd-lLh"/>
                             <constraint firstItem="HG3-L1-82v" firstAttribute="centerX" secondItem="VUw-jc-0yf" secondAttribute="centerX" id="5Zp-dj-ILa"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="lQX-uJ-tLx" secondAttribute="trailing" constant="20" id="6tL-fy-HhT"/>
                             <constraint firstItem="aVx-5X-xuk" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="7Hc-ke-OPI"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="7nU-Fr-SSm" secondAttribute="trailing" constant="20" id="9u0-e6-rpr"/>
+                            <constraint firstItem="7nU-Fr-SSm" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="BHu-NO-zwA"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HG3-L1-82v" secondAttribute="trailing" id="Dj8-kg-S4I"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="Wfi-uO-uML" secondAttribute="trailing" constant="20" id="GzP-Ya-7xp"/>
                             <constraint firstItem="aVx-5X-xuk" firstAttribute="top" secondItem="lQX-uJ-tLx" secondAttribute="bottom" constant="8" id="NNz-eP-cyM"/>
-                            <constraint firstItem="Wfi-uO-uML" firstAttribute="top" secondItem="aVx-5X-xuk" secondAttribute="bottom" constant="8" id="OhD-gr-Tka"/>
+                            <constraint firstItem="7nU-Fr-SSm" firstAttribute="top" secondItem="aVx-5X-xuk" secondAttribute="bottom" constant="8" id="QPe-I8-xIQ"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="aVx-5X-xuk" secondAttribute="trailing" constant="20" id="Qxz-FH-Qyw"/>
-                            <constraint firstItem="Wfi-uO-uML" firstAttribute="bottom" secondItem="VUw-jc-0yf" secondAttribute="bottom" constant="15" id="Wpj-TK-eoy"/>
                             <constraint firstItem="HG3-L1-82v" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VUw-jc-0yf" secondAttribute="leading" id="XLD-K2-6qS"/>
-                            <constraint firstItem="Wfi-uO-uML" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="YCj-4w-xbo"/>
                             <constraint firstItem="lQX-uJ-tLx" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="aLL-0X-Ioi"/>
                             <constraint firstItem="aVx-5X-xuk" firstAttribute="top" secondItem="lQX-uJ-tLx" secondAttribute="bottom" constant="8" id="fz1-RX-xdH"/>
+                            <constraint firstItem="7nU-Fr-SSm" firstAttribute="bottom" secondItem="VUw-jc-0yf" secondAttribute="bottom" constant="15" id="izg-rB-wcY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Character Detail" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="detailLabelOutlet" destination="Wfi-uO-uML" id="LcO-yv-sma"/>
                         <outlet property="imageViewOutlet" destination="lQX-uJ-tLx" id="Wq0-9t-Yxi"/>
+                        <outlet property="textViewOutlet" destination="7nU-Fr-SSm" id="f5N-LH-Ucw"/>
                         <outlet property="titleLabelOutlet" destination="aVx-5X-xuk" id="HvD-0B-Aoh"/>
                     </connections>
                 </viewController>

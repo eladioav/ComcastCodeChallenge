@@ -73,7 +73,7 @@ class MasterViewModel {
     ///     - index : Element number
     /// - Returns: Character description
     func getDescription(index : Int) -> String {
-        
+
         return self.filteredData[index].Text.components(separatedBy: "-").last ?? "No description"
     }
     
